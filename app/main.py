@@ -22,10 +22,6 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-@app.get("/")
-async def hello_world():
-    return {"Hi There"}
-    
 
 app.include_router(users.router)
 app.include_router(posts.router)
